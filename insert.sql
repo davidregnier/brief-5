@@ -154,3 +154,25 @@ INSERT INTO Abonnement (type, prix, bilan_IMC, acces_club) VALUES
 ('b less-fit', 125, 1, 1),
 ('membre', 100, 0, 1),
 ('coach', 50, 1, 1);
+
+INSERT INTO Assureur (nom, contrat, telephone, mail, id_adresse) VALUES
+('Allianz', 'Contrat 1', '01 02 03 04 05', 'contact@allianz.fr', 1),
+('AXA', 'Contrat 2', '01 02 03 04 06', 'contact@axa.fr', 2);
+
+INSERT INTO Club (nom, telephone, mail, licence, id_sauna, id_clim, id_salle, id_equipement, id_abonnement, id_assureur, id_adresse)
+VALUES ('L.Santos mountain park', '01 02 03 04 07', 'contact@cluba.com', 'A-1234', 1, 1, 1, 1, 1, 1,2),
+('Fleeca fit', '01 02 03 04 08', 'contact@clubb.com', 'B-5678', 2, 2, 2, 3, 3, 1,4),
+('Diamond goal', '01 02 03 04 09', 'contact@clubc.com', 'C-9101', 3, 3, 3, 4, 4, 2,9);
+
+INSERT INTO Coach (nom, prenom, id_abonnement) VALUES
+('Dupont', 'Jean', 11),
+('Martin', 'Julie', 11);
+
+-- et la derniere ....!!!
+
+INSERT INTO Membre (nom, prenom, age, horaire, mail, telephone, id_adresse, id_certificat_medical, id_connexion, id_carte_bancaire, id_genre, id_parrainage, id_coach, id_abonnement, id_club, id_produit) VALUES 
+('Martin', 'Jean', 35, '9h-12h', 'jean.martin@example.com', '+33123456789', 1, 1, 1, 1, 1, 1, 1, 3, 1, 1),
+('Durand', 'Sophie', 27, '14h-18h', 'sophie.durand@example.com', '+33765432198', 2, 2, 2, 2, 2, 2, 1, 1, 2, 2),
+('Lefebvre', 'Antoine', 45, '8h-10h', 'antoine.lefebvre@example.com', '+33678901234', 3, 3, 3, 3, 1, 3, 2, 2, 3, 5),
+('Leroy', 'Caroline', 29, '18h-20h', 'caroline.leroy@example.com', '+33654321098', 4, 4, 4, 4, 2, 4, 1, 3, 2, 4),
+('Moreau', 'Pierre', 33, '12h-14h', 'pierre.moreau@example.com', '+33123456789', 5, 5, 5, 5, 1, 5, 1, 2, 1, 1);
